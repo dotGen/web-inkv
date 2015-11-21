@@ -20,15 +20,44 @@
             <div class="col-md-2 nav-top-menu-item bg-grey-dark-1">
                 <span><a href="menu.html">INICIO</a></span>
             </div>
-            <div class="col-md-2 nav-top-menu-item bg-grey-dark-1">
-                <span><a data-toggle="collapse" href="#admin-opts">ADMINISTRACIÓN</a></span>
+            <div class="col-md-2 nav-top-menu-item bg-grey-dark-1" >
+                <a data-toggle="dropdown">
+                    <ul class="nav nav-tabs" style="border-bottom:none">
+                        <span>
+                            ADMINISTRACIÓN
+                            <ul class="dropdown-menu" style="border:solid 1px #dcdddf">
+                                <li class="disabled"><a href="#">Oficinas</a></li>
+                                <li class="disabled"><a href="#">Notarías</a></li>
+                                <li class="disabled"><a href="#">Registros</a></li>
+                                <li><a href="calendario.html" style="color:black">Calendarios</a></li>
+                            </ul>
+                        </span>
+                    </ul>
+                </a>
             </div> 
+        
             <div class="col-md-2 nav-top-menu-item bg-grey-dark-1">
                 <span><a hre="#">SEGURIDAD</a></span>
             </div>
             <div class="col-md-3 nav-top-menu-user bg-grey-light-3">
-                 <span>Sonia Ferrera</span>
-                <img src="recursos/Imagenes/Avatars/user2.png"/>
+
+                
+                <ul class="nav nav-tabs" style="border-bottom:none">
+                    <span>
+                                        <a data-toggle="dropdown">
+                     <img src="recursos/Imagenes/Avatars/user2.png"/>
+                     <span>Sonia Ferrera</span>
+                </a>
+                        <ul class="dropdown-menu" style="border:solid 1px #dcdddf">
+                            <li class="disabled"><a href="#">Oficinas</a></li>
+                            <li class="disabled"><a href="#">Notarías</a></li>
+                            <li class="disabled"><a href="#">Registros</a></li>
+                            <li><a href="calendario.html" style="background-color: #f9c5c5;color:#f27785">Salir</a></li>
+                        </ul>
+                    </span>
+                </ul>
+                
+                
             </div>    
     </div>
     
@@ -74,7 +103,7 @@
                 <span class="txt-grey-dark-3 bold">Calendario</span>
             </div>
             <div class="menu-content-body">
-                <span class="txt-grey-dark-3 bold font-big">23 nov.</span>
+                <span id="month" class="txt-grey-dark-3 bold font-big"></span>
             </div>
             <div class="menu-content-footer">
                 <span><a class="txt-grey-dark-3 bold" href="calendario.html">+ REUNIÓN: Cambios en las clausulas de las hipotecari...</a></span>
@@ -105,5 +134,47 @@
 	<script type="text/javascript" src="./js/BootStrap/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./js/plantilla_base.js"></script>
 
+    <script type="text/javascript">
+        var f = new Date();
+        switch (f.getMonth()) {
+            case 0:
+                var month = "ene.";
+                break;
+            case 1:
+                var month = "feb.";
+                break;
+            case 2:
+                var month = "mar.";
+                break;
+            case 3:
+                var month = "abr.";
+                break;
+            case 4:
+                var month = "may.";
+                break;
+            case 5:
+                var month = "jun.";
+                break;
+            case 6:
+                var month = "jul.";
+                break;
+            case 7:
+                var month = "ago.";
+                break;
+            case 8:
+                var month = "sep.";
+                break;
+            case 9:
+                var month = "oct.";
+                break;
+            case 10:
+                var month = "nov.";
+                break;
+            case 11:
+                var month = "dic.";
+        }
+        document.getElementById("month").innerHTML = f.getDate()+" "+month;    
+    </script>
+    
 </body>
 </html>
