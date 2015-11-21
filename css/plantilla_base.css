@@ -1,3 +1,12 @@
+.bold {
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../recursos/Fonts/AvenirNextLTPro-Regular.otf) format("opentype");
+}
+
 .bg-white {
     background-color: white;
 }
@@ -6,9 +15,32 @@
     border: solid 1px #4B4B4A;
 }
 
-.logo img {
+ul li {
+    text-decoration: none;
+}
+
+.row-top {
+    position:fixed;
+    width:100%;
+    height:70px;
+    margin-top: 10px;
+    border-bottom: solid 1px;
+}
+
+.logo {
     height: 40px;
     width : auto;
+    
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.margin-top-10 {
+    margin-top:20px;
+}
+
+.padding-top-10 {
+    padding-top:20px;
 }
 
 .padding-all-10 {
@@ -19,6 +51,80 @@
     margin-left: 20px;
 }
 
-.user {
-    height:auto;
+.user-logo {
+    height: 45px;
+    width:auto;
+    
+    margin-left:15px;
 }
+
+.left {
+    float:left;
+}
+
+.user-div {
+    margin-top:10px;
+}
+
+.user-name {
+    margin-top:20px;
+}
+
+.nav-left {
+    position:fixed;
+    top:80px;
+    width:200px;
+    bottom:0px;
+    height: 100%;
+    border-right: solid 1px black;
+}
+
+.nav-div {
+    text-align: center;
+}
+
+.nav-button {  
+    padding:10px;
+}
+
+.nav-button {
+    background-color: white;
+}
+
+.nav-button span {
+    color : #4b4a4e;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #4b4a4e;
+}
+
+.nav-button:hover span {
+    color:white;   
+}
+
+.nav-button-opt {
+    padding:10px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.nav-button-opt-container {
+    background-color:#dcdddf;
+}
+
+.content {
+    position:absolute;
+    top:80px;
+    left:200px;
+    width:100%;
+    height:100%;
+    
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+}
+
