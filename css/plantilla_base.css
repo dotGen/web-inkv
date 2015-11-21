@@ -29,7 +29,7 @@ ul li {
     width:100%;
     height:70px;
     margin-top: 10px;
-    border-bottom: solid 1px;
+    border-bottom: solid 1px #4B4B4A;
 }
 
 .logo {
@@ -76,13 +76,15 @@ ul li {
     margin-top:20px;
 }
 
+/*NAVLEFT*/
+
 .nav-left {
     position:fixed;
     top:80px;
     width:200px;
     bottom:0px;
     height: 100%;
-    border-right: solid 1px black;
+    border-right: solid 1px #4B4B4A;
 }
 
 .nav-div {
