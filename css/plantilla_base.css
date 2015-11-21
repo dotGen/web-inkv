@@ -175,4 +175,44 @@ ul li {
     height: 50px;
 }
 
+/*LOGIN*/
 
+.login-form-container {
+    position:absolute;
+    width:400px;
+    height:400px;  
+}
+
+.login-center-screen {
+    top:50%;
+    left:50%;
+    margin-top: -200px;
+    margin-left:-200px;
+}
+
+.login-logo img {
+    width:200px; 
+    margin-left:100px;
+    
+    margin-bottom:50px;
+}
+
+.login-form {
+    margin: 10px;
+    text-align: center;
+}
+
+.login-form-input  input {
+    width:300px;
+    margin: 5px;
+    border: solid 1px black;
+}
+
+.login-form-input-submit input{
+    margin-top: 10px;
+    width:100px;
+    
+    background-color: white;
+    color: grey;
+    box-shadow: none;
+}
