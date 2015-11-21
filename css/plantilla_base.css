@@ -3,11 +3,21 @@
     src: url(../recursos/Fonts/AvenirNextLTPro-Regular.otf);
 }
 
+@font-face {
+  font-family: 'Glyphicons Halflings';
+ 
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
+       url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
+       url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+       url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
 html {
     overflow-x: hidden;
 }
 
-span, input {
+span, input, a {
     font-family: Avenir;
 }
 
@@ -225,7 +235,7 @@ ul li {
 
 .nav-top-menu-user span {
     float:right;
-    margin-top:23px;
+    margin-top:20px;
     margin-left:20px;
     margin-right:20px;
     font-size: 1.2em;

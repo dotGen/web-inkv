@@ -45,10 +45,10 @@
 
 		// Set to true if you want the calendar to be visible at all times.
 		// NOTE: If your target element is hidden, the calendar will be hidden as well.
-		showAlways: false,
+		showAlways: true,
 
 		// Hide the calendar when a date is selected (only if showAlways is set to false).
-		hideOnClick: true,
+		hideOnClick: false,
 
 		// Allow selection of months by clicking on the month in the title.
 		allowMonthSelect: true,
@@ -65,8 +65,8 @@
 
 		// Arrows used for the Previous and Next month buttons on the title.
 		// Set these to blank to hide the arrows completely.
-		prevArrow: '\u25c4',
-		nextArrow: '\u25ba',
+		//prevArrow: '\u25c4',
+		//nextArrow: '\u25ba',
 
 		// A collection of dates that can be selectable by the user.
 		// The dates can be a one-time selection or made repeatable by setting
@@ -303,8 +303,8 @@
 				var selectableMonths = getSelectableList(0, 11, options.selectableMonths);
 				var selectableYears = getSelectableList(todayVal.year - 5, todayVal.year + 5, options.selectableYears);
 				var selectableDOW = getSelectableList(0, 6, options.selectableDOW);
-				var dowNames = options.dowNames || [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ];
-				var monthNames = options.monthNames || [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ];
+				var dowNames = options.dowNames || [ 'Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa' ];
+				var monthNames = options.monthNames || [ 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre' ];
 
 				// Create cell width based on el size
 				var containerWidth = el.outerWidth();
@@ -471,7 +471,7 @@
 								.click(function(e) {
 									if(options.prevArrow != '' && showPrev) {
 										e.stopPropagation();
-										setFirstDate(prevFirstDate);
+										//setFirstDate(prevFirstDate);
 									}
 								});
 
@@ -506,7 +506,7 @@
 								.click(function(e) {
 									if(options.nextArrow != '' && showNext) {
 										e.stopPropagation();
-										setFirstDate(nextFirstDate);
+										//setFirstDate(nextFirstDate);
 									}
 								});
 
@@ -641,6 +641,13 @@
 										options.selectedDate = options.firstDate = clickedData.date;
 
 										// Update calendar (and auto-hide if necessary)
+                                    
+                                    
+                                        //AQUIIIIIIII MODIFICADOOOO
+                                        if ($(this).data('data').date.getMonth() != firstDateMonth) {
+                                            return;
+                                        }
+                                    
 										self.render(function() {
 											if(!options.showAlways && options.hideOnClick) {
 												self.hide();
