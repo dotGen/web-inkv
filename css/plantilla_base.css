@@ -16,6 +16,18 @@ span, input {
     font-weight: bold;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
+.font-big {
+    font-size: 6em;
+}
+
+.font-med {
+    font-size: 3em;
+}
+
 .bg-white {
     background-color: white;
 }
@@ -231,7 +243,6 @@ ul li {
     border: none;
 }
 
-
 /*NAVTOP*/
 
 .nav-top-menu {
@@ -246,6 +257,10 @@ ul li {
     margin-top:15px;
     margin-left:30px;
     height: 40px;
+}
+
+.nav-top-menu-item span a {
+    color:white;
 }
 
 .nav-top-menu-user {
@@ -305,7 +320,7 @@ ul li {
 .menu-content-logo {
     display:block;
     text-align: center;
-    margin-top:90px;
+    margin-top:5%;
 }
 
 .menu-content-logo img {
@@ -316,24 +331,18 @@ ul li {
 
 .menu-content-header {
     text-align: center;
-    margin-top:50px;
+    margin-top:5%;
 }
 
 .menu-content-header span {
-    font-size: 1.5em;
-    color:white;
+    font-size: 2em;
 }
 
 /*CONTENT MENU BODY*/
 
 .menu-content-body {
     text-align: center;
-    margin-top: 40px;
-}
-
-.menu-content-body span {
-    font-size: 3em;
-    color: #dcdddf;
+    margin-top: 5%;
 }
 
 /*CONTENT MENU FOOTER*/
@@ -341,12 +350,10 @@ ul li {
 
 .menu-content-footer {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 5%;
 }
 
 .menu-content-footer span {
-    font-size: 1em;
-    color:white;
     text-decoration: underline;
 }
 
@@ -424,4 +431,8 @@ ul li {
 
 .txt-grey-dark-3 {
     color: #4b4a4e;
+}
+
+.txt-white {
+    color: white;
 }
