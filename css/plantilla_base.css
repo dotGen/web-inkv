@@ -8,8 +8,8 @@ html {
 }
 
 @font-face {
-    font-family: myFirstFont;
-    src: url(../recursos/Fonts/AvenirNextLTPro-Regular.otf) format("opentype");
+    font-family: Avenir;
+    src: url(../recursos/Fonts/AvenirNextLTPro-Regular.otf);
 }
 
 .bg-white {
@@ -207,15 +207,18 @@ ul li {
     margin: 5px;
     border: solid 1px #4b4a4e;
     padding-left:5px;
+    font-family: Avenir;
 }
 
 .login-form-input-submit input {
     margin-top: 10px;
     padding-top:7px;
     width:120px;
+    padding-left: 10px;
     height: 30px;
     background-color: #f27785;
     color: #4b4a4e;
     border-radius: 0px;
     font-size: 0.9em;
+    border: none;
 }
