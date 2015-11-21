@@ -123,7 +123,7 @@ ul li {
 
 @-webkit-keyframes animatedBackground {
 	0% { background-position: 0 0; }
-	100% { background-position: -300px 0; }
+	100% { background-position: -1350px 0; }
 }
 
 @-ms-keyframes animatedBackground {
@@ -132,22 +132,21 @@ ul li {
 }
 
 .bg-colours {
-    width:200px;
     height:40px;
 }
 
 .bg-colours img {
-    background: url("../recursos/Imagenes/Logotipos/paleta.png") repeat-y;
+    background: url("../recursos/Imagenes/Logotipos/paleta4.png") repeat-y;
     background-position: 0px 0px;
  
-	animation: animatedBackground 3s linear infinite;
+	animation: animatedBackground 10s linear infinite;
 	-moz-animation: animatedBackground 3s linear infinite;
-	-webkit-animation: animatedBackground 3s linear infinite;
+	-webkit-animation: animatedBackground 4s linear infinite;
 
 }
 
 .logo-loading {
-    height: 50px;
+    height: 80px;
 }
 
 /*LOGIN*/
@@ -349,6 +348,10 @@ ul li {
     background-color: #4b4a4e;
 }
 
+.bg-pink {
+    background-color: #f27785;
+}
+
 /*TEXT COLORS*/
 
 .txt-grey-light-1 {
@@ -494,4 +497,17 @@ ul li {
     margin-top:20px;
     border-bottom: solid 1px #9d9fa2;
     padding-bottom:5px;
+}
+
+/*ALERT*/
+
+.login-alert {
+    text-align: center;
+    margin-left: 70px;
+    width:250px;
+    transition: height 10s ease-in;
+}
+
+.login-alert pop {
+    height: 100px;
 }

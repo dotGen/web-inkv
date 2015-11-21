@@ -17,16 +17,19 @@
         <div class="login-logo">
             <img src="recursos/Imagenes/Logotipos/VERTA2.png">
         </div>
+        
+        <div id="alert" class='alert alert-danger bg-pink txt-white login-alert hide'>Usuario o contraseña incorrecto</div>
+        
         <div class="login-form">
             <form>
                 <div class="login-form-input">
-                    <input type="text" placeholder="usuario"><br>
+                    <input type="text" id="user" placeholder="Usuario"><br>
                 </div>
                  <div class="login-form-input">
-                    <input type="text" placeholder="contraseña"><br>
+                    <input type="password" id="pass" placeholder="Contraseña"><br>
                 </div>
                 <div class="login-form-input login-form-input-submit">
-                    <input class="btn btn-default" type="submit" value="ACCEDER">
+                    <input class="btn btn-default" onclick="login()" value="ACCEDER">
                 </div>         
             </form>
         </div>
@@ -36,5 +39,17 @@
 	<script type="text/javascript" src="./js/BootStrap/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./js/plantilla_base.js"></script>
 
+    <script type="text/javascript">
+        function login () {
+            if (document.getElementById("user").value == "SoniaFerrera" &&
+                document.getElementById("pass").value == "1234") {
+                location.href='loading.html';
+            } else {
+                $('#alert').toggleClass('hide');
+                $('#alert').toggleClass('pop');
+            }
+        }
+    </script>
+    
 </body>
 </html>
