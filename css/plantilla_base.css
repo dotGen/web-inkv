@@ -44,7 +44,7 @@ ul li {
     position:fixed;
     width:100%;
     height:80px;
-    border-bottom: solid 1px #4B4B4A;
+    border-bottom: solid 1px #8a8c8f;
 }
 
 .logo {
@@ -95,52 +95,6 @@ ul li {
     margin-top:20px;
 }
 
-/*NAVLEFT*/
-
-.nav-left {
-    position:fixed;
-    top:80px;
-    width:200px;
-    bottom:0px;
-    height: 100%;
-    border-right: solid 1px #4B4B4A;
-}
-
-.nav-div {
-    text-align: center;
-}
-
-.nav-button {  
-    padding:10px;
-}
-
-.nav-button {
-    background-color: white;
-}
-
-.nav-button span {
-    color : #4b4a4e;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.nav-button:hover {
-    background-color: #4b4a4e;
-}
-
-.nav-button:hover span {
-    color:white;   
-}
-
-.nav-button-opt {
-    padding:10px;
-    text-align: left;
-    cursor: pointer;
-}
-
-.nav-button-opt-container {
-    background-color:#dcdddf;
-}
 
 .content {
     position:absolute;
@@ -435,4 +389,109 @@ ul li {
 
 .txt-white {
     color: white;
+}
+
+
+/*CALENDAR PAGE*/
+
+.nav-top-calendar-logo {
+    
+}
+
+.nav-top-calendar {
+    border-bottom: solid 1px #8a8c8f;
+    height:70px;
+}
+
+.nav-top-calendar-user {
+    font-size: 1.2em;
+    color:white;
+    height:100%;
+    font-weight: bold;
+    border-left: solid 1px #4b4a4e;
+}
+
+.nav-top-calendar-user-logo .badge {
+    position:absolute;
+    bottom:40px;
+    right:30px;
+    color: #4b4a4e;
+    border: solid 1px #4b4a4e;
+    background-color: white;
+}
+
+.nav-top-calendar-user-logo img {
+    width:50px;
+    margin-right: 30px;
+    margin-top:10px;
+    float:right;   
+}
+
+.nav-top-calendar-user-name {
+    display: block;
+    float:right;
+    color: #4b4a4e;
+    margin-top:25px;
+    margin-right:50px;
+}
+
+/*NAVLEFT*/
+
+.nav-left {
+    position:fixed;
+    top:70px;
+    width:200px;
+    bottom:0px;
+    height: 100%;
+    border-right: solid 1px #c7c8ca;
+}
+
+.nav-div {
+    text-align: center;
+}
+
+.nav-button {  
+    padding:10px;
+    border-bottom: solid 1px #c7c8ca;
+}
+
+.nav-button {
+    background-color: white;
+}
+
+.nav-button span {
+    color : #4b4a4e;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #9d9fa2;
+}
+
+.nav-button:hover span {
+    color:white;   
+}
+
+.nav-button-opt {
+    padding:10px;
+    text-align: left;
+    cursor: pointer;
+    border-bottom: solid 1px #9d9fa2;
+}
+
+.nav-button-opt-container {
+    background-color:#dcdddf;
+}
+
+/*CALENDARIO CONTENT*/
+
+.calendario-content {
+
+}
+
+.calendario-route {
+    margin-top:20px;
+    border-bottom: solid 1px #9d9fa2;
+    padding-bottom:5px;
 }

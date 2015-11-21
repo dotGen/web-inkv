@@ -3,26 +3,28 @@
 <head>
 	<title>Calendario</title>
 	
-	<!-- Metadatos -->
 	<meta charset="utf-8">
 	<meta content="Daniel Medina Alemán" name="author" />
 	<meta content="Web de Dotty" name="description" />
 	<meta content="Diseño, Tecnología, Blog" name="keywords" />
 
-	<!-- Estilos CSS -->
 	<link rel="stylesheet" type="text/css" href="./css/plantilla_base.css">
 	<link rel="stylesheet" type="text/css" href="./css/BootStrap/bootstrap.min.css">
 </head>
 <body>
     
-    <div class="row row-top bg-white">
-        <div class="col-md-1">
-            <img class="logo margin-top-10 margin-left-30" src="recursos/Imagenes/Logotipos/VERTA.png"/>
-        </div>        
-        <div class="user-div col-md-2 col-md-offset-9">
-            <h4 class="left">Sonia Ferrera</h4>
-            <img class="user-logo " src="recursos/Imagenes/Avatars/user2.png"/>
-        </div>        
+    <div class="row nav-top-calendar">
+        <div class="col-md-9 nav-top-menu-logo">
+            <img src="recursos/Imagenes/Logotipos/VERTA2.png"/>
+        </div>
+        <div class="col-md-3 nav-top-calendar-user">
+            <span class="nav-top-calendar-user-logo">
+                <span class="badge txt-white">42</span>
+                <img src="recursos/Imagenes/Avatars/user2.png"/>
+                <span class="glyphicon glyphicon-cloud"></span>
+            </span>        
+            <span class="nav-top-calendar-user-name txt-grey-dark-1">Sonia Ferrera</span>
+        </div>    
     </div>
     
     <div class="nav-div">
@@ -67,21 +69,14 @@
         </div>
     </div>
     
-
-
-    
-    <div class="content">
-         <section>
-        </section>   
+    <div class="row calendario-content">
+        <div class="col-md-10 col-md-offset-2 calendario-route">
+        <span class="bold">Estás en </span><span>Listado de Calendarios Nacionales </span>
+        </div>
     </div>
 
-	<!-- Scripts -->
-	<!--JQuery-->
 	<script type="text/javascript" src="./js/JQuery/jquery-2.1.4.min.js"></script> 
-	<!--BootStrap-->
 	<script type="text/javascript" src="./js/BootStrap/bootstrap.min.js"></script>
-	<!--Otros Plugins-->
-	<!--Javascript Personalizado-->
 	<script type="text/javascript" src="./js/plantilla_base.js"></script>
 
 </body>
