@@ -19,9 +19,10 @@ html, body {
 
 html {
     overflow-x: hidden;
+    
 }
 
-span, input, a {
+span, input, a, h2 {
     font-family: Avenir;
 }
 
@@ -485,11 +486,13 @@ ul li {
     text-align: center;
 }
 
-.nav-button {  
+.nav-button {
     padding:10px;
+    padding-left: 20px;
     border-bottom: solid 1px #c7c8ca;
     background-color: white;
     width:100%;
+    cursor: pointer;
 }
 
 .nav-button span {
@@ -508,6 +511,7 @@ ul li {
 
 .nav-button-opt {
     padding:10px;
+    padding-left: 20px;
     text-align: left;
     cursor: pointer;
     border-bottom: solid 1px #9d9fa2;
@@ -553,9 +557,9 @@ ul li {
 
 .calendario-title {
     margin-left:20px;
-    margin-bottom:20px;
+    margin-bottom:-10px;
     font-weight:bold;
-    font-size: 2.5em; 
+    font-size: 2.5em;
 }
 
 .calendario-separator {
@@ -568,7 +572,7 @@ ul li {
 }
 
 .calendario-calendar {
-    margin-left:20px;
+    margin-left:35px;
     margin-bottom:20px;
 }
 
@@ -592,4 +596,8 @@ ul li {
 
 .nav-top-user-not:hover {
     background-color: #9d9fa2;
+}
+
+.pink{
+    color: #c7254e;
 }

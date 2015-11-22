@@ -1,3 +1,6 @@
+.calendario{
+	margin-bottom: 330px;
+}
 .gldp-default {
 	position: absolute;
 	font-family: 'helvetica';
@@ -21,8 +24,8 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dadada',GradientType=0 );
 }
 
-/* Cell border */
-.gldp-default .border {
+/*------------------------- Cell border -----------------*/
+.gldp-default  {
 	border-style: solid;
 	border-width: 0;
 	border-color: #888;
@@ -116,6 +119,9 @@
 	
 }
 
+.gldp-default{
+	font-weight: bold;
+}
 /* Currently selected day */
 .gldp-default .selected {
 	font-weight: bold;
@@ -127,7 +133,7 @@
     color: #fff;
 	font-weight: bold;
 	border-color: #4a4b4e;
-	background: ;	
+	/*background: ;*/
 }
 
 /* Today */

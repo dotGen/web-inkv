@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Calendario</title>
+	<title>Calendarío</title>
 	
 	<meta charset="utf-8">
 	<meta content="Daniel Medina Alemán" name="author" />
@@ -10,8 +10,10 @@
 
 	<link rel="stylesheet" type="text/css" href="./css/plantilla_base.css">
 	<link rel="stylesheet" type="text/css" href="./css/BootStrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/glDatePicker.default.css">
+
 </head>
-<body>
+<body onload="showCalendar()">
     
     <div class="row nav-top-calendar">
         <div class="col-md-9">
@@ -33,52 +35,55 @@
     
     <div class="row">
         <div class="col-md-2 nav-left">
-                <div class="nav-button">
-                    <span class="bold">INICIO</span>
+                <div class="nav-button bold">
+                    INICIO
                 </div>
-                <div class="nav-button"  data-toggle="collapse" href="#admin-opts">
-                    <span class="bold">ADMINISTRACIÓN</span>
+                <div class="nav-button bold"  data-toggle="collapse" href="#admin-opts">
+                    ADMINISTRACIÓN
                 </div>         
                 <div class="collapse nav-button-opt-container" id="admin-opts">
                     <div class="nav-button-opt">
-                        <span>Oficinas</span>
+                        Oficinas
                     </div>
                     <div class="nav-button-opt">
-                        <span>Notarias</span>
+                        Notarias
                     </div>
                     <div class="nav-button-opt">
-                        <span>Registros</span>
+                        Registros
                     </div>
                     <div class="nav-button-opt">
-                        <span>Calendario</span>
+                        Calendario
                     </div>
                 </div>  
-                <div class="nav-button" data-toggle="collapse" href="#seguridad-opts">
-                    <span class="bold">SEGURIDAD</span>
+                <div class="nav-button bold" data-toggle="collapse" href="#seguridad-opts">
+                    SEGURIDAD
                 </div>
                 <div class="collapse nav-button-opt-container" id="seguridad-opts">
                     <div class="nav-button-opt">
-                        <span>Opción 1</span>
+                        Opción 1
                     </div>
                     <div class="nav-button-opt">
-                        <span>Opción 2</span>
+                        Opción 2
                     </div>
                     <div class="nav-button-opt">
-                        <span>Opción 3</span>
+                        Opción 3
                     </div>
-                </div>  
-                <div class="nav-button">
-                    <span class="bold">SALIR</span>
+                </div>
+                <div class="nav-button bold">
+                    AJUSTES
+                </div>
+                <div class="nav-button bold">
+                    SALIR
                 </div>
         </div>
         <div class="col-md-10">   
             <div class="row">
                 <div class="col-md-12 calendario-route">
-                    <span class="bold">
-                        Estás en 
+                    <span class="bold pink">
+                        Estás en:
                     </span>
                     <span>
-                        Listado de Calendarios Nacionales 
+                        Listado de Calendarios Nacionales /
                     </span>
                 </div>
             </div>
@@ -118,68 +123,61 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 calendario-title">
-                    <span>
+                <div class="col-md-6 calendario-title">
+                    <h2 class="bold">
                         Listado de calendarios nacionales
-                    </span>
+                    </h2>
                 </div>
             </div>   
             <div class="row">
-                <div class="col-md-6 calendario-separator">
+                <div class="col-md-10 calendario-separator">
                     <hr>
                 </div>
             </div>       
             <div class="row">
-                <div class="col-md-2 calendario-calendar">
-                    <span>
-                        [CALENDARIOS]
-                    </span>
+                <div class="col-md-3 calendario-calendar calendario" id="calendario1">
+
                 </div>
-                <div class="col-md-2 calendario-calendar">
-                    <span>
-                        [CALENDARIOS]
-                    </span>
-                </div>     
-                <div class="col-md-2 calendario-calendar">
-                    <span>
-                        [CALENDARIOS]
-                    </span>
+                <div class="col-md-3 calendario-calendar calendario" id="calendario2">
+
+                </div>
+                <div class="col-md-3 calendario-calendar calendario" id="calendario3">
+
                 </div>
             </div>   
             <div class="row">
-                <div class="col-md-2 calendario-calendar">
-                    <span>
-                        [CALENDARIOS]
-                    </span>
+                <div class="col-md-3 calendario-calendar calendario" id="calendario4">
+
                 </div>
-                <div class="col-md-2 calendario-calendar">
-                    <span>
-                        [CALENDARIOS]
-                    </span>
+                <div class="col-md-3 calendario-calendar calendario" id="calendario5">
+
                 </div>     
-                <div class="col-md-2 calendario-calendar">
-                    <span>
-                        [CALENDARIOS]
-                    </span>
+                <div class="col-md-3 calendario-calendar calendario" id="calendario6">
+
                 </div>
             </div>        
             <div class="row">
-                <div class="col-md-2 calendario-calendar">
-                    <span>
-                        [CALENDARIOS]
-                    </span>
+            <div class="col-md-3 calendario-calendar calendario" id="calendario7">
+
+            </div>
+            <div class="col-md-3 calendario-calendar calendario" id="calendario8">
+
+            </div>
+            <div class="col-md-3 calendario-calendar calendario" id="calendario9">
+
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-md-3 calendario-calendar calendario" id="calendario10">
+
                 </div>
-                <div class="col-md-2 calendario-calendar">
-                    <span>
-                        [CALENDARIOS]
-                    </span>
-                </div>     
-                <div class="col-md-2 calendario-calendar">
-                    <span>
-                        [CALENDARIOS]
-                    </span>
+                <div class="col-md-3 calendario-calendar calendario" id="calendario11">
+
                 </div>
-            </div>  
+                <div class="col-md-3 calendario-calendar calendario" id="calendario12">
+
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-1 calendario-back">
                     <a href="menu.html">
@@ -193,8 +191,92 @@
         </div>
     </div>
 
+
+    <script type="text/javascript">
+
+
+        function showCalendar(){
+            $('#calendario1').glDatePicker(
+                    {
+                        dowOffset: 1,
+                        selectedDate: new Date(2015, 1, 0),
+                        selectableDOW: [0, 1, 2, 3, 4, 5, 6]
+                    });
+            $('#calendario2').glDatePicker(
+                    {
+                        dowOffset: 1,
+                        selectedDate: new Date(2015, 2, 0),
+                        selectableDOW: [0, 1, 2, 3, 4, 5, 6]
+                    });
+            $('#calendario3').glDatePicker(
+                    {
+                        dowOffset: 1,
+                        selectedDate: new Date(2015, 3, 0),
+                        selectableDOW: [0, 1, 2, 3, 4, 5, 6]
+                    });
+            $('#calendario4').glDatePicker(
+                    {
+                        dowOffset: 1,
+                        selectedDate: new Date(2015, 4, 0),
+                        selectableDOW: [0, 1, 2, 3, 4, 5, 6]
+                    });
+            $('#calendario5').glDatePicker(
+                    {
+                        dowOffset: 1,
+                        selectedDate: new Date(2015, 5, 0),
+                        selectableDOW: [0, 1, 2, 3, 4, 5, 6]
+                    });
+            $('#calendario6').glDatePicker(
+                    {
+                        dowOffset: 1,
+                        selectedDate: new Date(2015, 6, 0),
+                        selectableDOW: [0, 1, 2, 3, 4, 5, 6]
+                    });
+            $('#calendario7').glDatePicker(
+                    {
+                        dowOffset: 1,
+                        selectedDate: new Date(2015, 7, 0),
+                        selectableDOW: [0, 1, 2, 3, 4, 5, 6]
+                    });
+            $('#calendario8').glDatePicker(
+                    {
+                        dowOffset: 1,
+                        selectedDate: new Date(2015, 8, 0),
+                        selectableDOW: [0, 1, 2, 3, 4, 5, 6]
+                    });
+            $('#calendario9').glDatePicker(
+                    {
+                        dowOffset: 1,
+                        selectedDate: new Date(2015, 9, 0),
+                        selectableDOW: [0, 1, 2, 3, 4, 5, 6]
+                    });
+            $('#calendario10').glDatePicker(
+                    {
+                        dowOffset: 1,
+                        selectedDate: new Date(2015, 10, 0),
+                        selectableDOW: [0, 1, 2, 3, 4, 5, 6]
+                    });
+            $('#calendario11').glDatePicker(
+                    {
+                        dowOffset: 1,
+                        selectedDate: new Date(2015, 11, 0),
+                        selectableDOW: [0, 1, 2, 3, 4, 5, 6]
+                    });
+            $('#calendario12').glDatePicker(
+                    {
+                        dowOffset: 1,
+                        selectedDate: new Date(2015, 12, 0),
+                        selectableDOW: [0, 1, 2, 3, 4, 5, 6]
+                    });
+
+
+        }
+    </script>
+
+
 	<script type="text/javascript" src="./js/JQuery/jquery-2.1.4.min.js"></script> 
 	<script type="text/javascript" src="./js/BootStrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/glDatePicker.js"></script>
 	<script type="text/javascript" src="./js/plantilla_base.js"></script>
 
 </body>
