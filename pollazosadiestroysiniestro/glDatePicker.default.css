@@ -118,10 +118,16 @@
 
 /* Currently selected day */
 .gldp-default .selected {
-	color: #fff;
 	font-weight: bold;
 	border-color: #4a4b4e;
 	background: #f9c5c5;	
+}
+
+.gldp-default .selected-sab-dom {
+    color: #fff;
+	font-weight: bold;
+	border-color: #4a4b4e;
+	background: ;	
 }
 
 /* Today */
