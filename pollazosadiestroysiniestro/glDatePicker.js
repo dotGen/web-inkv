@@ -62,6 +62,9 @@
 		// The date that will appear selected when the calendar renders.
 		// By default it will be set to todayDate.
 		selectedDate: null,
+        
+        allSab: true, 
+        allDom: true,
 
 		// Arrows used for the Previous and Next month buttons on the title.
 		// Set these to blank to hide the arrows completely.
@@ -158,7 +161,7 @@
 		// The day of the week to start the calendar on.  0 is Sunday, 1 is Monday and so on.
 		dowOffset: 0,
         
-        selectedDates: [ {date: '',month: '', day:'0', selected: true}, {date: '',month: '', day:'6', selected: true}],
+        selectedDates: [],
 
 		// Callback that will trigger when the user clicks a selectable date.
 		// Parameters that are passed to the callback:
@@ -234,6 +237,35 @@
 				}
 			});
 
+            
+            if (options.allSab) {
+                for (var i = 1; i < new Date(options.selectedDate.getYear(), options.selectedDate.getMonth(), 0).getDate(); i++) {   
+                    if (new Date(options.selectedDate.getFullYear(),options.selectedDate.getMonth(), i).getDay() == 6) {
+                        options.selectedDates.push({
+                            date: i,
+                            month: options.selectedDate.getMonth(),
+                            day: 6,
+                            selected: true
+                        });
+                    }
+                }
+            }
+            
+            if (options.allDom) {
+                for (var i = 1; i < new Date(options.selectedDate.getYear(), options.selectedDate.getMonth(), 0).getDate(); i++) {   
+                    if (new Date(options.selectedDate.getFullYear(),options.selectedDate.getMonth(), i).getDay() == 0) {
+                        options.selectedDates.push({
+                            date: i,
+                            month: options.selectedDate.getMonth(),
+                            day: 0,
+                            selected: true
+                        });
+                    }
+                }
+            }
+            
+            console.log(options.selectedDates);
+            
 			// Render calendar
 			self.render();
 		};
@@ -605,31 +637,44 @@
 								cellClass = ([ 'sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat' ])[cellDateVal.day];
 
                                 for (var i=0; i < options.selectedDates.length ; i++) {
-                                    if (options.selectedDates[i].date == cellDateVal.date 
-                                        && options.selectedDates[i].month == cellDateVal.month
-                                        && options.selectedDates[i].day == cellDateVal.day) {     
-                                        if (options.selectedDates[i].selected) {
-                                            cellClass = 'selected';
-                                        } else {  
-                                            cellClass = '';
+                                    
+                                        if (options.selectedDates[i].date == '' && options.selectedDates[i].month == ''
+                                           && options.selectedDates[i].day == cellDateVal.day) {
+    
+                                                var c = false;
+                                                
+                                                for (var j = 0; j < options.selectedDates.length ; j++) {
+                                                    if (cellDateVal.day == options.selectedDates[j].day 
+                                                        && options.selectedDates[i].date == cellDateVal.date 
+                                                        && options.selectedDates[i].month == cellDateVal.month) {
+                                                        c=true;
+                                                    }
+                                                }
+                                                
+                                                if (!c) {
+                                                    options.selectedDates.push({
+                                                        date: cellDateVal.date,
+                                                        month: cellDateVal.month,
+                                                        day: cellDateVal.day,
+                                                        selected: true
+                                                    });
+                                                }
                                         }
-                                    } else {
-                                        if (options.selectedDates[i].date == ''
-                                            && options.selectedDates[i].month == '' 
-                                            && options.selectedDates[i].day == cellDateVal.day) {
-                                        
-                                            options.selectedDates.push({
-                                                date: cellDateVal.date,
-                                                month: cellDateVal.month,
-                                                day: cellDateVal.day,
-                                                selected: true
-                                            });
+
+                                        if (options.selectedDates[i].date == cellDateVal.date 
+                                            && options.selectedDates[i].month == cellDateVal.month
+                                            && options.selectedDates[i].day == cellDateVal.day) {     
+                                                if (options.selectedDates[i].selected) {
+                                                    cellClass = 'selected';
+                                                } else {  
+                                                    cellClass = '';
+                                                }
                                         }
-                                    }
                                 }
                                 
-                                console.log(options.selectedDates);
+
                                 
+
 								// Handle today or selected dates
 								if(firstDateMonth != cellDateVal.month) { cellClass += ' outday'; }
 								if(todayTime == cellDateTime) { 
@@ -676,8 +721,6 @@
 
 										// Update calendar (and auto-hide if necessary)
                                     
-
-                                    
                                         if ($(this).data('data').date.getMonth() != firstDateMonth) {
                                             return;
                                         }
@@ -685,18 +728,9 @@
                                         var b = false;
 
                                         for (var i = 0; i < options.selectedDates.length; i++) {
-                                            /*if (options.selectedDates[i].date == '' 
-                                                && options.selectedDates[i].month == '') {
-     
-                                                b=true;
-                                            } else {*/
-                                                if (options.selectedDates[i].date == clickedData.date.getDate()
-                                                && options.selectedDates[i].month == clickedData.date.getMonth() 
-                                                && options.selectedDates[i].selected) {                                                                                         b = true;
-                                                options.selectedDates[i].selected = false;      
-                                                
-                                                }
-                                            //}
+                                            if (options.selectedDates[i].date == clickedData.date.getDate() && options.selectedDates[i].month == clickedData.date.getMonth() && options.selectedDates[i].selected) {                                                                                                                                    b = true;
+                                                options.selectedDates[i].selected = false;     
+                                            }
 
                                         }
                                         
@@ -712,7 +746,6 @@
                                     
 										self.render(function() {
 											if(!options.showAlways && options.hideOnClick) {
-                                                console.log("asd");
 												self.hide();
 											}
 										});
