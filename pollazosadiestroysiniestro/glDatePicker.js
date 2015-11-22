@@ -157,6 +157,8 @@
 
 		// The day of the week to start the calendar on.  0 is Sunday, 1 is Monday and so on.
 		dowOffset: 0,
+        
+        selectedDates: [ {date: '',month: '10',day:'4', selected: true}],
 
 		// Callback that will trigger when the user clicks a selectable date.
 		// Parameters that are passed to the callback:
@@ -602,10 +604,24 @@
 								// Handle active dates and weekends
 								cellClass = ([ 'sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat' ])[cellDateVal.day];
 
+                                for (var i=0; i < options.selectedDates.length ; i++) {
+                                    if (options.selectedDates[i].date == cellDateVal.date 
+                                        && options.selectedDates[i].month == cellDateVal.month) {     
+                                        if (options.selectedDates[i].selected) {
+                                            cellClass = 'selected';
+                                        } else {   
+                                            cellClass = '';
+                                        }
+                                    }
+                                }
+                                
 								// Handle today or selected dates
 								if(firstDateMonth != cellDateVal.month) { cellClass += ' outday'; }
 								if(todayTime == cellDateTime) { cellClass = 'today'; cellZIndex += 50; }
-								if(options.selectedDate._time() == cellDateTime) { cellClass = 'selected'; cellZIndex += 51; }
+								if(options.selectedDate._time() == cellDateTime) { 
+                                    //cellClass = 'selected'; 
+                                    cellZIndex += 51; 
+                                }
 
 								// Handle special dates
 								if(options.specialDates) {
@@ -642,14 +658,35 @@
 
 										// Update calendar (and auto-hide if necessary)
                                     
+                                        var b = false;
+                                        
+                                        for (var i = 0; i < options.selectedDates.length; i++) {
+                                            if (options.selectedDates[i].date == clickedData.date.getDate()
+                                                && options.selectedDates[i].month == clickedData.date.getMonth() 
+                                                && options.selectedDates[i].selected) {                                                                                         b = true;
+                                                options.selectedDates[i].selected = false;      
+                                                
+                                             }
+                                        }
+                                        
+                                        if (!b) {
+                                            options.selectedDates.push({
+                                                date: clickedData.date.getDate(),
+                                                month: clickedData.date.getMonth(),
+                                                day: clickedData.date.getDay(),
+                                                selected : true
+                                            });  
+                                        }
                                     
-                                        //AQUIIIIIIII MODIFICADOOOO
+                                        console.log(options.selectedDates);
+                                    
                                         if ($(this).data('data').date.getMonth() != firstDateMonth) {
                                             return;
                                         }
                                     
 										self.render(function() {
 											if(!options.showAlways && options.hideOnClick) {
+                                                console.log("asd");
 												self.hide();
 											}
 										});
