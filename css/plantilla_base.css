@@ -225,6 +225,10 @@ ul li {
     height: 40px;
 }
 
+.nav-top-menu-item:hover {
+    background-color: #8a8c8e;
+}
+
 .nav-top-menu-item span a {
     color:white;
 }
@@ -252,7 +256,6 @@ ul li {
 
 .nav-top-menu-item {
     height:100%;
-    border-right:2px solid white;
 }
 
 .nav-top-menu-item span {
@@ -538,4 +541,8 @@ ul li {
 
 .login-alert pop {
     height: 100px;
+}
+
+.nav-top-user-not:hover {
+    background-color: #9d9fa2;
 }

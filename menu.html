@@ -17,14 +17,16 @@
             <div class="col-md-3 nav-top-menu-logo">
                 <img src="recursos/Imagenes/Logotipos/vertaB.png"/>
             </div>
-            <div class="col-md-2 nav-top-menu-item bg-grey-dark-1">
-                <span><a href="menu.html">INICIO</a></span>
-            </div>
+            <a href="menu.html">
+                <div class="col-md-2 nav-top-menu-item bg-grey-dark-1">
+                    <span>INICIO</span>
+                </div>
+            </a>
             <div class="col-md-2 nav-top-menu-item bg-grey-dark-1" >
                 <a data-toggle="dropdown">
                     <ul class="nav nav-tabs" style="border-bottom:none">
                         <span>ADMINISTRACIÓN</span>
-                        <ul class="dropdown-menu" style="border:solid 1px #dcdddf">
+                        <ul class="dropdown-menu" style="width:100%;border:solid 1px #dcdddf">
                             <li class="disabled"><a href="#">Oficinas</a></li>
                             <li class="disabled"><a href="#">Notarías</a></li>
                             <li class="disabled"><a href="#">Registros</a></li>
@@ -33,36 +35,34 @@
                     </ul>
                 </a>
             </div> 
-        
-            <div class="col-md-2 nav-top-menu-item bg-grey-dark-1">
-                <span><a hre="#">SEGURIDAD</a></span>
-            </div>
+            <a href="#">
+                <div class="col-md-2 nav-top-menu-item bg-grey-dark-1">
+                    <span>SEGURIDAD</span>
+                </div>
+            </a>
             <div class="col-md-3 nav-top-menu-user bg-grey-light-3">
-                <img src="recursos/Imagenes/Avatars/user2.png"/>
-                <a data-toggle="dropdown">
+                <a data-toggle="dropdown" style="padding-top: 0px;padding-bottom: 0px;">
                     <ul class="nav nav-tabs" style="border-bottom:none;float:right;margin-top:5px;">
-                        <span class="glyphicon glyphicon-menu-down"></span>
-                        <ul class="dropdown-menu  bg-grey-light-3">
+                    <img src="recursos/Imagenes/Avatars/user2.png"/>
+                        <ul class="dropdown-menu  bg-white" style="width:100%;padding-top:0px;border-bottom-width: 0px;border-top-width: 0px;padding-bottom: 0px;">
                             <li>
-                                <a href="#">Mi perfil</a>                                    
-                            </li>
-                            <li>
-                                <a href="#">Opciones</a>                                         
-                            </li>
-                            <li>
-                                <a href="#">Salir</a>                                         
+                                <div class="row" style="margin-left:0px;">
+                                    <div class="col-md-6 bg-grey-mid-2 nav-top-user-not">
+                                        <a href="#">
+                                            <span style="text-align:center;float:left;display:block;text-align:center;margin-right: 50%;margin-top: 25px;margin-left: 50%;margin-bottom: 25px;border-bottom-width: 25px;padding-top: 0px;padding-bottom: 0px;"class="glyphicon glyphicon-cog"></span>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 bg-grey-mid-2 nav-top-user-not">
+                                        <a href="login.html">
+                                            <span style="text-align:center;float:left;display:block;text-align:center;margin-right: 50%;margin-top: 25px;margin-left: 50%;margin-bottom: 25px;border-bottom-width: 25px;padding-top: 0px;padding-bottom: 0px;" class="glyphicon glyphicon-off"></span></a>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </ul>     
                 </a>
                 <span>Sonia Ferrera</span>
             </div>    
-    </div>
-    
-    <div class="row nav-route">
-        <div class="col-md-12 nav-route-span"> 
-            <span><span class="bold">Estás</span><span class="nav-route-span-page"> / Home </span></span>
-        </div>
     </div>
     
     <div class="row">
