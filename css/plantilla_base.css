@@ -6,11 +6,11 @@
 @font-face {
   font-family: 'Glyphicons Halflings';
  
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
-       url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
-       url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),
-       url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('./Fonts/glyphicons-halflings-regular.eot');
+  src: url('./Fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+       url('./Fonts/glyphicons-halflings-regular.woff') format('woff'),
+       url('./Fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+       url('./Fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
 html, body {
@@ -19,13 +19,21 @@ html, body {
 
 html {
     overflow-x: hidden;
-    
+
 }
 
 span, input, a, h2 {
     font-family: Avenir;
 }
 
+.noLink:hover{
+    color:inherit;
+    text-decoration: none;
+}
+.noLink{
+    color:inherit;
+    text-decoration: none;
+}
 .bold {
     font-weight: bold;
 }
@@ -142,6 +150,12 @@ ul li {
 @-webkit-keyframes animatedBackground {
 	0% { background-position: 0 0; }
 	100% { background-position: -1350px 0; }
+}
+
+
+@-moz-keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: -1350px 0; }
 }
 
 @-ms-keyframes animatedBackground {
@@ -590,7 +604,7 @@ ul li {
     transition: height 10s ease-in;
 }
 
-.login-alert pop {
+.login-alert pop{
     height: 100px;
 }
 
